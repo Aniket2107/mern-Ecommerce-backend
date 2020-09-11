@@ -16,6 +16,7 @@ const productRoute = require("./routes/product");
 const orderRoute = require("./routes/order");
 const stripeRoute = require("./routes/Stripepayments");
 const btRoute = require("./routes/btpayments");
+const contactRoute = require("./routes/contact");
 
 //dotenv config
 dotenv.config();
@@ -44,5 +45,6 @@ app.use("/api", productRoute);
 app.use("/api", orderRoute);
 app.use("/api", stripeRoute);
 app.use("/api", btRoute);
+app.use("/api", contactRoute);
 
 app.listen(PORT, () => console.log(`Server started at port ${PORT}`));
